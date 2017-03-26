@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>Weather app</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="weather.css">
+</head>
+<body>
+
+<div class="container" ng-controller="myCtrl">
+
+<h1 style="color:#b30000;">Weather App</h1>
+
+<input class="form-control" ng-model="weather.city" style="margin-top: 50px;">
+<button class="btn btn-primary" ng-click="submit()" style="margin-top: 25px;">Submit</button>
+	<h1><u>{{weth.name}}</u></h1>
+
+	<div class="row">
+	<div class="col-md-2">
+		<h2>Temperature:</h2>
+	</div>
+	<div class="col-md-10">
+		<h2>{{weth.main.temp}}<sup>o</sup>C</h2>
+	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-md-2">
+		<h2>Humidity:</h2>
+	</div>
+	<div class="col-md-10">
+		<h2>{{weth.main.humidity}}%</h2>
+	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-md-2">
+		<h2>Max-Temp:</h2>
+	</div>
+	<div class="col-md-10">
+		<h2>{{weth.main.temp_max}}<sup>o</sup>C</h2>
+	</div>	
+	</div>
+
+	<div class="row">
+	<div class="col-md-2">
+		<h2>Min-Temp:</h2>
+	</div>
+	<div class="col-md-10">
+		<h2>{{weth.main.temp_min}}<sup>o</sup>C</h2>
+	</div>	
+	</div>
+	
+</div>
+
+
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script type="text/javascript" src="controller/controller.js"></script>
+</body>
+</html>
